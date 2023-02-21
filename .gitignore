@@ -14,3 +14,7 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
+
+# vite/node_modules
+dist
+node_modules
