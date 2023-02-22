@@ -55,7 +55,7 @@ main {
   }
 
   .details {
-    margin: 1rem;
+    margin: 1.2rem;
 
     .tag {
       font-family: 'Montserrat';
@@ -68,11 +68,13 @@ main {
     .title {
       font-size: 2.2rem;
       font-weight: 700;
+      line-height: 2rem;
     }
 
     .description {
       font-family: 'Montserrat';
       color: var(--grayblue);
+      line-height: 1.6rem;
     }
 
     .pricing {
