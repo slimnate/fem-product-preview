@@ -75,6 +75,25 @@ main {
       color: var(--grayblue);
     }
 
+    .pricing {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+
+      .active {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--darkcyan);
+      }
+
+      .inactive {
+        padding-left: 1rem;
+        text-decoration: line-through;
+        color: var(--grayblue);
+      }
+    }
+
     /* add bottom margin to all subcomponents */
     > :not(:last-child) {
       margin-bottom: 1rem;
