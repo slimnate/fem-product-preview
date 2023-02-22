@@ -19,8 +19,8 @@
     "supports-preserve-symlinks-flag": "^1.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
     "postcss-css-variables": "^0.18.0",
+    "postcss-nested": "^6.0.1",
     "postcss-utilities": "^0.8.4",
     "vite": "^4.1.4"
   },
