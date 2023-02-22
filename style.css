@@ -76,7 +76,7 @@ main {
     }
 
     /* add bottom margin to all subcomponents */
-    *:not(:last-child) {
+    > :not(:last-child) {
       margin-bottom: 1rem;
     }
   }
