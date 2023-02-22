@@ -44,4 +44,12 @@ main {
 
 .card {
   max-width: 300px;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.card img {
+  content: url('images/image-product-mobile.jpg');
+  max-width: 100%;
 }
