@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('static/fonts/Montserrat.ttf') format('truetype');
+  font-variation-settings: 'wght' 400;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('static/fonts/Fraunces.ttf') format('truetype');
+  font-variation-settings: 'wght' 400;
+}
+
 main {
   min-height: 100vh;
   display: flex;
