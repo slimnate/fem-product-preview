@@ -118,7 +118,7 @@ main {
     align-items: center;
     justify-content: center;
 
-    ::before {
+    &::before {
       content: url('/images/icon-cart.svg');
       padding-right: 1em;
     }
