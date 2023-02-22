@@ -96,6 +96,24 @@ main {
       }
     }
 
+    button {
+      background-color: var(--darkcyan);
+      color: var(--white);
+      font-weight: 700;
+      border: none;
+      width: 100%;
+      padding: 1em;
+      border-radius: 0.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button::before {
+      content: url('/images/icon-cart.svg');
+      padding-right: 1em;
+    }
+
     /* add bottom margin to all subcomponents */
     > :not(:last-child) {
       margin-bottom: 1rem;
