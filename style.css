@@ -1,8 +1,15 @@
 main {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-// https://ismamz.github.io/postcss-utilities/docs#position
+/* https://ismamz.github.io/postcss-utilities/docs#position */
 .attribution {
   @util position(absolute null 0px 0px 0px);
+}
+
+.card {
+  max-width: 300px;
 }
