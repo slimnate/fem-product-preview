@@ -23,11 +23,11 @@
   --darkblue: hsl(212, 21%, 14%);
   --grayblue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
+  font-family: 'Fraunces';
+  font-size: 14px;
 }
 
 body {
-  font-family: 'Fraunces';
-  font-size: 14px;
   background-color: var(--cream);
 }
 
@@ -47,7 +47,7 @@ main {
   max-width: 320px;
   background-color: var(--white);
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
 
   img {
     content: url('images/image-product-mobile.jpg');
@@ -60,13 +60,13 @@ main {
     .tag {
       font-family: 'Montserrat';
       text-transform: uppercase;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       letter-spacing: 0.5ch;
       color: var(--grayblue);
     }
 
     .title {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       font-weight: 700;
     }
 
