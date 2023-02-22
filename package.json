@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "postcss-css-variables": "^0.18.0",
+    "postcss-custom-media": "^9.1.2",
     "postcss-nested": "^6.0.1",
     "postcss-utilities": "^0.8.4",
     "vite": "^4.1.4"
