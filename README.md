@@ -1,92 +1,243 @@
-# Frontend Mentor - Product preview card component
+# Frontend Mentor - Product preview card component solution
 
-![Design preview for the Product preview card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Frontend Mentor - Product preview card component solution](#frontend-mentor---product-preview-card-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+        - [Using PostCSS with Vite](#using-postcss-with-vite)
+        - [Emmet](#emmet)
+        - [Pseudo-elements](#pseudo-elements)
+        - [Nested selectors](#nested-selectors)
+        - [`:not` and `:last-child` selectors](#not-and-last-child-selectors)
+        - [Media queries](#media-queries)
+        - [Box shadow](#box-shadow)
+    - [Continued development](#continued-development)
+  - [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this product preview card component and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover and focus states for interactive elements
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./images/screenshot.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [Solution Page](https://your-solution-url.com)
+- Live Site URL: [Live Site](https://master--astounding-malabi-e72b79.netlify.app/)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Flexbox
+- Box shadow
+- Pseudo-elements
+- [PostCSS](https://postcss.org/)
+  - Nested Selectors
+  - Variables
+  - Utilities
+  - Custom Media Queries
+- [Vite](https://vitejs.dev/)
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+##### Using PostCSS with Vite
+This project allowed me to get familiar with configuring PostCSS to work with vite, adding plugins, etc.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+Install :
+```sh
+npm i -D vite postcss-css-variables postcss-utilities postcss-nested postcss-custom-media
+```
 
-## Deploying your project
+postcss.config.js
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```js
+module.exports = {
+  plugins: [
+    require('postcss-nested'),
+    require('postcss-css-variables'),
+    require('postcss-utilities'),
+    require('postcss-custom-media'),
+  ],
+};
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+*NOTE: When using the postcss vscode extension, you need to add postcss to the emmet.include languages setting for css property autocompletion to work. See https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-postcss*
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+Links:
+[https://vitejs.dev/](https://vitejs.dev/)
+[https://github.com/postcss/postcss-nested](https://github.com/postcss/postcss-nested)
+[https://www.npmjs.com/package/postcss-css-variables](https://www.npmjs.com/package/postcss-css-variables)
+[https://github.com/ismamz/postcss-utilities](https://github.com/ismamz/postcss-utilities)
+[https://www.npmjs.com/package/postcss-custom-media](https://www.npmjs.com/package/postcss-custom-media)
 
-## Create a custom `README.md`
+##### Emmet
+This project was also good practice for using emmet to scaffold HTML, I used the following emmet abbreviation to generate almost the entire HTML for this project:
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+THIS
+```css
+.card>img+.details>.tag+.title+.description+.pricing+button
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+BECOMES:
+```html
+  <div class="card">
+    <img src="" alt="">
+    <div class="details">
+      <div class="tag"></div>
+      <div class="title"></div>
+      <div class="description"></div>
+      <div class="pricing"></div>
+      <button></button>
+    </div>
+  </div>
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+##### Pseudo-elements
+I also got some practice using the ::before pseudo-element to display the icon on the buy button:
 
-## Submitting your solution
+```css
+.card .details {
+  ...
+  button {
+    ...
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+    &::before {
+      content: url('/images/icon-cart.svg');
+      padding-right: 1em;
+    }
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+    &:hover {
+      cursor: pointer;
+      box-shadow: inset 0 0 50px 50px rgba(0, 0, 0, 0.5);
+    }
+  }
+  ...
+}
+```
 
-## Sharing your solution
+##### Nested selectors
+I used the [postcss-nested](https://github.com/postcss/postcss-nested) plugin for nested selectors in my css. This allows for better grouping of code and improved readability. However, I'll need to watch out for doing too much nesting, as this became a slight hindrance during development on this project.
 
-There are multiple places you can share your solution:
+```css
+.card .details {
+  ...
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+  .tag {
+    ...
+  }
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+  .title {
+    ...
+  }
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+  .description {
+    ...
+  }
 
-## Got feedback for us?
+  .pricing {
+    ...
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+    .active {
+      ...
+    }
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+    .inactive {
+      ...
+    }
+  }
 
-**Have fun building!** 🚀
+  button {
+    ...
+
+    &::before {
+      ...
+    }
+
+    &:hover {
+      ...
+    }
+  }
+
+  > :not(:last-child) {
+    ...
+  }
+}
+```
+
+
+##### `:not` and `:last-child` selectors
+I used the `:not` and `:last-child` selectors to apply a bottom margin to every child of the details panel except for the last child, since the panel itself already has a padding defined, which would give the bottom element double the margin.
+
+Example:
+
+```css
+.card .details {
+  ...
+
+  /* add bottom margin to all subcomponents */
+  > :not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+```
+
+*Note: the `>` in the above code specifies direct children only - without it this code would recursively apply the style to any element within `.card .details` that is not the last child of it's parent, regardless of what that parent element is. Using `>` ensures this only applies to the elements whose parent is `.card .details`.*
+
+##### Media queries
+I used the [postcss-custom-media](https://www.npmjs.com/package/postcss-custom-media) plugin for my media queries. To use this plugin, I first defined a media query at the top of my css:
+
+```css
+@custom-media --lg (width >= 768px);
+```
+
+Then use the custom query:
+
+```css
+@media screen and (--lg) {
+  ...
+}
+```
+
+##### Box shadow
+I used a semi-transparent box shadow to darken the buy button on hover:
+
+```css
+.card .details {
+  ...
+  button {
+    ...
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: inset 0 0 2em 2em rgba(0, 0, 0, 0.5);
+    }
+  }
+  ...
+}
+```
+
+### Continued development
+
+On future projects I would like to further refine my dev/build tooling and environment to further utilize different plugins for postcss, and start incorporating some frontend frameworks like Svelte or React into the mix, once project complexity warrants it.
+
+## Author
+
+- Website - [slimnate](https://slimnate.com)
+- Frontend Mentor - [@slimnate](https://www.frontendmentor.io/profile/slimnate)
